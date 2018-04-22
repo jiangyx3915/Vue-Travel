@@ -66,7 +66,7 @@ export default {
   mounted () {
     this.scroll = new Bscroll(this.$refs.search)
   },
-   methods: {
+  methods: {
     handleCityClick (city) {
       this.changeCity(city)
       this.$router.push('/')
