@@ -1,6 +1,6 @@
 <template>
   <div class="wrapper">
-    <swiper :options="swiperOption">
+    <swiper v-if="showSwiper" :options="swiperOption">
       <swiper-slide :key="item.id" v-for="item in swiperList">
         <img class="swiper-img" :src="item.imgUrl" alt="">
       </swiper-slide>
@@ -13,22 +13,20 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination', // 指定指示器渲染地方的类
         loop: true// 开启轮播
-      },
-      swiperList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/15/9250dbc86a456302.jpg_640x200_4c7220d4.jpg'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/fb/9140fd5178ae6b02.jpg_640x200_40ef818b.jpg'
-        }
-      ]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      return this.swiperList.length
     }
   }
 }

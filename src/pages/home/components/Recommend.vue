@@ -17,29 +17,8 @@
 <script>
 export default {
   name: 'HomeRecommend',
-  data () {
-    return {
-      recommendList: [
-        {
-          id: '0001',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/c9/c936f3fccfc6d7eda3.img.jpg_200x200_46052773.jpg',
-          title: '大连海洋世界',
-          desc: '大连海洋世界大连海洋世界大连海洋世界'
-        },
-        {
-          id: '0002',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/c9/c936f3fccfc6d7eda3.img.jpg_200x200_46052773.jpg',
-          title: '大连海洋世界',
-          desc: '大连海洋世界大连海洋世界大连海洋世界'
-        },
-        {
-          id: '0003',
-          imgUrl: 'http://img1.qunarzz.com/sight/p0/1704/c9/c936f3fccfc6d7eda3.img.jpg_200x200_46052773.jpg',
-          title: '大连海洋世界',
-          desc: '大连海洋世界大连海洋世界大连海洋世界'
-        }
-      ]
-    }
+  props: {
+    recommendList: Array
   }
 }
 </script>
